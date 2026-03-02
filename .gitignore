@@ -1,0 +1,28 @@
+# Build artifacts
+/intersight-mcp-server
+bin/
+dist/
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Test binaries
+*.test
+*.out
+coverage.out
+
+# Modules
+go.work
+go.work.sum
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Environment / secrets
+.env
+.env.local
+*.pem
