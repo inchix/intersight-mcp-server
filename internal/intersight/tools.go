@@ -9,8 +9,8 @@ import (
 
 // FilterArgs is the shared input schema for tools that support OData filtering.
 type FilterArgs struct {
-	Filter string `json:"filter,omitempty" jsonschema:"description=OData $filter expression (e.g. \"Model eq 'UCSC-C220-M5SX'\" or \"Severity eq 'Critical'\")"`
-	Top    int32  `json:"top,omitempty" jsonschema:"description=Maximum number of results to return (default 100, max 1000)"`
+	Filter string `json:"filter,omitempty" jsonschema:"OData $filter expression, e.g. Model eq UCSC-C220-M5SX or Severity eq Critical"`
+	Top    int32  `json:"top,omitzero" jsonschema:"Maximum number of results to return, default 100, max 1000"`
 }
 
 // NoArgs is the input schema for tools that take no parameters.
