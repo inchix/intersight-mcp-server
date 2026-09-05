@@ -6,7 +6,7 @@
 - [ ] `list_server_profiles` - List server profiles and templates
 - [ ] `list_policies` - List policies by type (NTP, BIOS, boot, etc.)
 - [ ] Add `$select` parameter to reduce response payload size
-- [ ] Add `$orderby` parameter for sorting results
+- [x] Add `$orderby` parameter for sorting results
 
 ## Tier 3 - Write Operations
 - [ ] `acknowledge_alarm` - Acknowledge an alarm
@@ -24,11 +24,12 @@
 - [ ] Document remote connection setup in README (Claude Desktop `mcp-remote`, direct URL, podman run examples)
 
 ## Infrastructure
-- [ ] Unit tests with mock Intersight responses
+- [x] Unit tests for host normalization, arg clamping, and formatting
+- [ ] Unit tests with mock Intersight HTTP responses (httptest round-tripper)
 - [ ] Integration test with real Intersight (behind build tag)
 - [ ] CI/CD pipeline (GitHub Actions: lint, test, build, push image)
 - [ ] Release automation (goreleaser)
 - [ ] MCP resources for static/cached data (orgs, profiles)
 - [ ] MCP prompts for guided workflows (diagnose server, audit firmware)
-- [ ] Pagination for large result sets (auto-follow $skip/$top)
+- [ ] Pagination for large result sets (auto-follow $skip/$top; `$inlinecount` total is already reported)
 - [ ] `INTERSIGHT_API_KEY` env var as alternative to file path (inline key)

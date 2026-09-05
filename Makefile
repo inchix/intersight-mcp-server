@@ -1,3 +1,6 @@
+GOTOOLCHAIN ?= auto
+export GOTOOLCHAIN
+
 MODULE   := github.com/inchix/intersight-mcp-server
 BINARY   := intersight-mcp-server
 VERSION  ?= $(shell git describe --tags --always --dirty 2>/dev/null || echo "dev")

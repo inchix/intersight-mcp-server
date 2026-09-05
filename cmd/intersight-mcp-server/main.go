@@ -22,6 +22,8 @@ func main() {
 		os.Exit(1)
 	}
 
+	intersight.Version = version
+
 	client, err := intersight.NewClient(keyID, keyFile, host)
 	if err != nil {
 		log.Fatalf("Failed to create Intersight client: %v", err)
